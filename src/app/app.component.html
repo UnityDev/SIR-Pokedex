@@ -1,0 +1,58 @@
+<div class="container">
+    <h1>Bonjour Olivier, bienvenue dans le monde du Pokecode!</h1>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <form method="POST" action="/person" (ngSubmit)="recherchePokemonById()">
+                <div class="form-group">
+                    <label>Trier par nom</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="filter.name">
+                    <label for="idpokemon">Recherche du pokemon</label>
+                    <select (change)="actualiserId($event)" class="form-control">
+                        <option value=""></option>
+                        <option *ngFor="let p of allPokemon  | FilterPipe:filter" value="{{ p.id }}"> {{ p.name | capitalize }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="idpokemon">Identifiant correspondant</label>
+                    <input id="idpokemon" type=number class="form-control" name=idpokemon placeholder="Id du pokemon" [(ngModel)]="idpokemon" >
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-lg-6 pokedex">
+            <div class="pokedex-pokemon" *ngFor="let p of pokemonSelected">
+                <div class="pokedex-pokemon-id">
+                    #{{ p.id }}
+                </div>
+                <img [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
+                     [attr.src]="p.sprite">
+                <div class="pokedex-pokemon-name">
+                    {{ p.name | capitalize }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 prof_chen">
+            <img src="/assets/img/chen.png">
+            <figcaption>Professeur Olivier</figcaption>
+        </div>
+
+    </div>
+
+    <hr>
+    <h3>Pokédex de la première version</h3>
+    <div class="pokedex">
+        <div class="pokedex-pokemon" *ngFor="let p of allPokemon">
+            <div class="pokedex-pokemon-id">
+                #{{ p.id }}
+            </div>
+            <img [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
+                 [attr.src]="p.sprite">
+            <div class="pokedex-pokemon-name">
+                {{ p.name | capitalize }}
+            </div>
+        </div>
+    </div>
+</div>
+
