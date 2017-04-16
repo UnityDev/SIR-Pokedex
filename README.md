@@ -5,9 +5,9 @@ Nous avons utilisé angular-cli pour propulser notre application.
 
 Ce tp a été réalisé par deux binômes:
 
--Antoine Ravet
--Alexis Renault
--Pierre Louis Ollivier
+- Antoine Ravet
+- Alexis Renault
+- Pierre Louis Ollivier
 - Godis Bodie
 
 ## Mise en oeuvre 
