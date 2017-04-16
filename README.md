@@ -24,14 +24,14 @@ Dans un premier temps, nous avons réalisé un tutoriel en anglais basé sur l'A
  
  https://onsen.io/blog/tutorial-how-to-create-pokemon-app-using-angular2-cli/
 
-Nous avons choisi de repartir de cette base déjà travaillé par l'ensemble du groupe pour répondre aux contraintes du TP.
+Nous avons choisi de repartir de cette base déjà travaillée par l'ensemble du groupe pour répondre aux contraintes du TP.
 On a ensuite ajouté des fonctionnalités propres au sujet du TP:
 
 -Recherche d'un pokemon par son id
 -Recherche d'un pokemon par son nom
 - Possibilité de filtrer la liste déroulante afin d'avoir une recherche plus précise
 
-Notre pokédex se base sur les pokémons de la première génération, cependant il est très facile de rajouter des pokemon dans notre application.
+Notre pokédex se base sur les pokémons de la première génération, cependant il est très facile de rajouter des pokémons dans notre application.
 Il est également très simple d'ajouter des informations supplémentaires sur chaque pokémon, par exemple:
 
 - Les types du pokémon
